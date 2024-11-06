@@ -41,12 +41,18 @@
         body { 
             font-family: 'Inter', sans-serif; 
             --font-sans-serif: 'Inter'; }
+
+        @media (max-width:640px){
+          #btn{
+            display: none !important;
+          }
+        }
     </style>
 </head>
 <body>
-<div class="flex flex-col min-h-[100dvh]">
-  <header class="bg-primary text-primary-foreground flex items-center justify-between md:px-8 md:py-6">
-    <a class="text-3xl font-bold" href="#home">
+<div class="flex flex-col min-h-[100dvh] relative">
+  <header class="py-4 px-6 bg-primary text-primary-foreground flex items-center justify-between md:px-8 md:py-6">
+    <a class="text-2xl md:text-3xl font-bold" href="#home">
       Ncube's Plumbing
     </a>
     <nav class="hidden md:flex items-center gap-6">
@@ -66,7 +72,7 @@
         Contact Us
       </a>
     </nav>
-    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 md:hidden">
+    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-0 border border-white bg-primary hover:bg-accent hover:text-primary h-8 w-8 md:hidden" id="menu-btn">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -86,46 +92,82 @@
       <span class="sr-only">Toggle navigation menu</span>
     </button>
   </header>
-  <section class="flex flex-col md:px-8 md:py-10" id="home">
+  <div class="hidden absolute bg-white text-primary w-10/12 h-auto p-6 md:hidden" id="nav-items">
+    <nav class="">
+      <ul class="space-y-4">
+        <li>
+          <a class="hover:underline md:text-lg" href="#services">
+          Services
+          </a>
+        </li>
+        <li>
+          <a class="hover:underline md:text-lg" href="#about-us">
+            About Us
+          </a>
+        </li>
+        <li>
+          <a class="hover:underline md:text-lg" href="#our-work">
+            Gallery
+          </a>
+        </li>
+        <li>
+          <a class="hover:underline md:text-lg" href="#testimonials">
+            Testimonials
+          </a>
+        </li>
+        <li>
+          <a class="hover:underline md:text-lg" href="#contact-us">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <section class="py-6 px-6 flex flex-col md:px-8 md:py-10 " id="home">
     <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] flex items-center h-auto">
         <div class="mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">
+            <h1 class="hidden text-4xl md:text-5xl font-bold text-primary mb-4 md:block">
                 Ncube's Plumbing
             </h1>
-            <p class="text-muted-foreground mb-8 md:text-lg">We are a team of skilled professionals dedicated to providing top-notch bathroom renovations and iron gate work. With years of experience, we strive to deliver exceptional service and quality craftsmanship.</p>
-            <a class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" href="#">
+            <p class="mb-2 text-muted-foreground md:mb-8 md:text-lg">We are a team of skilled professionals dedicated to providing top-notch bathroom renovations and iron gate work. With years of experience, we strive to deliver exceptional service and quality craftsmanship.</p>
+            <a class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 hover:border hover:border-primary hover:text-primary focus:outline-none focus:ring-0 focus:ring-primary" href="#about-us" id="btn">
             Learn More
             </a>
         </div>
         <div>
-            <img src="images/bathroom2.jpg" alt="Bathroom" class=" scale-85 w-full h-auto object-cover rounded-lg">
+            <img src="images/bathroom2.jpg" alt="Bathroom" class="scale-85 w-full h-auto object-cover rounded-lg">
+            <p class="text-center">
+              <a class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 hover:border hover:border-primary hover:text-primary focus:outline-none focus:ring-0 focus:ring-primary mt-6 md:hidden" href="#about-us">
+                Learn More
+                </a>
+            </p>
         </div>
     </div>
   </section>
-  <section class="md:px-8 md:py-10" id="services">
+  <section class="py-6 md:px-8 md:py-10" id="services">
     <div class="mx-auto space-y-8">
         <div class="container mx-auto" data-id="26">
             <div class="text-center md:mb-8" data-id="27">
-                <h2 class="text-3xl font-bold mb-2 text-orange-500" data-id="28">Our Services
+                <h2 class="text-2xl font-bold mb-2 text-orange-500 md:text-3xl" data-id="28">Our Services
                 </h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-id="30">
-                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300" data-id="31">
+                <div class="w-11/12 mx-auto bg-card p-6 rounded-lg shadow-md border border-gray-300 md:w-full" data-id="31">
                     <div class="flex items-center mb-4" data-id="32">
                         <svg data-id="33" class="text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 mr-2"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line>
                         </svg>
-                        <h3 class="text-2xl font-bold text-muted-foreground px-2" data-id="34">
+                        <h3 class="text-xl font-bold text-muted-foreground px-2 md:text-2xl" data-id="34">
                             Bathroom Renovations
                         </h3>
                     </div>
                     <p class="text-muted-foreground md:text-lg" data-id="35">Our team of skilled plumbers and tilers can transform your bathroom into a modern, functional, and visually appealing space. From complete overhauls to minor upgrades, we've got you covered.
                     </p>
                 </div>
-                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300" data-id="36">
+                <div class="w-11/12 mx-auto bg-card p-6 rounded-lg shadow-md border border-gray-300 md:w-full" data-id="36">
                     <div class="flex items-center mb-4" data-id="37">
                         <svg data-id="38" class="text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 mr-2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                         </svg>
-                        <h3 class="text-2xl px-2 font-bold text-muted-foreground" data-id="39">
+                        <h3 class="text-xl px-2 font-bold text-muted-foreground md:text-2xl" data-id="39">
                             Iron Gate Work
                         </h3>
                     </div>
@@ -136,22 +178,22 @@
         </div>
         <div class="container mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300">
-                <h3 class="text-2xl font-bold mb-4 text-muted-foreground">Plumbing</h3>
-                <p class="text-muted-foreground mb-4 md:text-lg">
-                    Our team of experienced plumbers specializes in all aspects of plumbing, including bathroom renovations,
-                    pipe repairs, and water heater installations.
-                </p>
+                <div class="w-11/12 mx-auto bg-card p-6 rounded-lg shadow-md border border-gray-300 md:full">
+                  <h3 class="text-xl font-bold mb-4 text-muted-foreground md:text-2xl">Plumbing</h3>
+                  <p class="text-muted-foreground mb-4 md:text-lg">
+                      Our team of experienced plumbers specializes in all aspects of plumbing, including bathroom renovations,
+                      pipe repairs, and water heater installations.
+                  </p>
                 </div>
-                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300">
-                <h3 class="text-2xl font-bold mb-4 text-muted-foreground">Welding</h3>
-                <p class="text-muted-foreground mb-4 md:text-lg">
-                    We offer professional welding services for custom iron gate fabrication and installation, ensuring a
-                    durable and aesthetically pleasing final product.
-                </p>
+                <div class="w-11/12 mx-auto bg-card p-6 rounded-lg shadow-md border border-gray-300 md:w-full">
+                  <h3 class="text-xl font-bold mb-4 text-muted-foreground md:text-2xl">Welding</h3>
+                  <p class="text-muted-foreground mb-4 md:text-lg">
+                      We offer professional welding services for custom iron gate fabrication and installation, ensuring a
+                      durable and aesthetically pleasing final product.
+                  </p>
                 </div>
-                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300">
-                <h3 class="text-2xl font-bold mb-4 text-muted-foreground">Tiling</h3>
+                <div class="w-11/12 mx-auto bg-card p-6 rounded-lg shadow-md border border-gray-300 md:w-full">
+                <h3 class="text-xl font-bold mb-4 text-muted-foreground md:text-2xl">Tiling</h3>
                 <p class="text-muted-foreground mb-4 md:text-lg">
                     Our skilled tilers specialize in bathroom tile installation, creating beautiful and functional spaces
                     that meet your specific needs.
@@ -161,16 +203,15 @@
         </div>
     </div>
   </section>
-  <section class="md:px-8 md:py-10 bg-primary" id="about-us">
+  <section class="py-6 px-6 md:px-8 md:py-10 bg-primary" id="about-us">
     <div class="mx-auto">
-      <h2 class="font-bold mb-6 text-white text-center md:text-3xl ">About Us</h2>
+      <h2 class="text-2xl font-bold mb-6 text-white text-center md:text-3xl ">About Us</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-2xl font-bold mb-4 text-white">Our History</h3>
+          <h3 class="text-xl font-bold mb-4 text-white md:text-2xl">Our History</h3>
           <p class="text-white mb-4 md:text-lg">
-            Ncube\'s Plumbing was founded in 2010 with the goal of providing high-quality plumbing and bathroom
-            renovation services to the local community. Over the years, we\'ve expanded our expertise to include
-            iron gate fabrication and installation.
+            Ncube's Plumbing was founded in 2010 with the goal of providing high-quality plumbing and bathroom
+            renovation services to the local community. Over the years, we've expanded our expertise to include iron gate fabrication and installation.
           </p>
           <p class="text-white md:text-lg">
             Our team of skilled professionals is dedicated to delivering exceptional results and exceeding our
@@ -178,7 +219,7 @@
           </p>
         </div>
         <div>
-          <h3 class="text-2xl font-bold mb-4 text-white">Our Team</h3>
+          <h3 class="text-xl font-bold mb-4 text-white md:text-2xl">Our Team</h3>
           <p class="text-white mb-4 md:text-lg">
             At Ncube's Plumbing, we have a team of experienced and certified plumbers, welders, and tilers who work
             together to ensure the success of every project.
@@ -191,9 +232,9 @@
       </div>
     </div>
   </section>
-  <section class="md:px-8 md:py-10" id="our-work">
+  <section class="py-6 px-6 md:px-8 md:py-10" id="our-work">
     <div class="mx-auto">
-      <h2 class="text-3xl md:text-3xl font-bold mb-6 text-orange-500 text-center">Our Work</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-orange-500 text-center">Our Work</h2>
       <div dir="ltr" data-orientation="horizontal">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <img
@@ -201,7 +242,7 @@
             width="400"
             height="300"
             alt="Before"
-            class="rounded-lg object-cover"
+            class="mx-auto rounded-lg object-cover"
             style="aspect-ratio:400/300;object-fit:cover"
         />
         <img
@@ -209,7 +250,7 @@
             width="400"
             height="300"
             alt="Before"
-            class="rounded-lg object-cover"
+            class="mx-auto rounded-lg object-cover"
             style="aspect-ratio:400/300;object-fit:cover"
         />
         <img
@@ -217,7 +258,7 @@
             width="400"
             height="300"
             alt="Before"
-            class="rounded-lg object-cover"
+            class="mx-auto rounded-lg object-cover"
             style="aspect-ratio:400/300;object-fit:cover"
         />
 
@@ -226,7 +267,7 @@
             width="400"
             height="300"
             alt="Before"
-            class="rounded-lg object-cover"
+            class="mx-auto rounded-lg object-cover"
             style="aspect-ratio:400/300;object-fit:cover"
         />
         <img
@@ -234,7 +275,7 @@
             width="400"
             height="300"
             alt="Before"
-            class="rounded-lg object-cover"
+            class="mx-auto rounded-lg object-cover"
             style="aspect-ratio:400/300;object-fit:cover"
         />
         <img
@@ -242,17 +283,17 @@
             width="400"
             height="300"
             alt="Before"
-            class="rounded-lg object-cover"
+            class="mx-auto rounded-lg object-cover"
             style="aspect-ratio:400/300;object-fit:cover"
         />
         </div>
       </div>
     </div>
   </section>
-  <section class="bg-muted md:px-8 md:py-10" id="testimonials">
+  <section class="py-6 px-6 md:px-8 md:py-10 bg-muted" id="testimonials">
     <div class="mx-auto">
       <p class="text-center font-semibold md:text-lg text-muted-foreground">Testimonials</p>
-      <h2 class="text-3xl md:text-3xl font-bold mb-6 text-orange-500 text-center">What Our Clients Say</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-orange-500 text-center">What Our Clients Say</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
           <div class="p-6 space-y-4">
@@ -314,9 +355,9 @@
       </div>
     </div>
   </section>
-  <section class="bg-muted md:px-8 md:py-10" id="contact-us">
+  <section class="py-6 px-6 md:px-8 md:py-10 bg-muted" id="contact-us">
     <div class="mx-auto">
-      <h2 class="text-3xl md:text-3xl font-bold mb-6 text-orange-500 text-center">Contact Us</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-orange-500 text-center">Contact Us</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <form class="space-y-4">
@@ -346,23 +387,23 @@
         <div>
           <div class="space-y-4 md:px-4">
             <div>
-              <h3 class="text-2xl font-bold mb-2 text-orange-500">Address</h3>
-              <p class="text-muted-foreground">85 Heine Street Lombardy East  Johannesburg</p>
+              <h3 class="text-xl font-bold mb-2 text-orange-500 md:text-2xl">Address</h3>
+              <p class="text-muted-foreground md:text-lg">85 Heine Street Lombardy East  Johannesburg</p>
             </div>
             <div>
-              <h3 class="text-2xl font-bold mb-2 text-orange-500">Phone</h3>
-              <p class="text-muted-foreground">+2784 308 7632</p>
+              <h3 class="text-xl md:text-2xl font-bold mb-2 text-orange-500">Phone</h3>
+              <p class="text-muted-foreground md:text-lg">+2784 308 7632</p>
             </div>
             <div>
-              <h3 class="text-2xl font-bold mb-2 text-orange-500">Hours</h3>
-              <p class="text-muted-foreground">24 Hrs / 7 days</p>
+              <h3 class="text-xl md:text-2xl font-bold mb-2 text-orange-500">Hours</h3>
+              <p class="text-muted-foreground md:text-lg">24 Hrs / 7 days</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <footer class="bg-primary text-primary-foreground md:px-8 md:py-10">
+  <footer class="py-6 px-6 bg-primary text-primary-foreground md:px-8 md:py-10">
     <div class="mx-auto flex flex-col md:flex-row items-center justify-between">
       <p class="text-sm">© 2024 Ncube's Plumbing</p>
       <div class="flex items-center gap-4 mt-4 md:mt-0">
@@ -385,5 +426,14 @@
     </div>
   </footer>
 </div>
+
+<script>
+  let navBtn = document.getElementById('menu-btn');
+  let menuItems = document.getElementById('nav-items');
+
+  navBtn.addEventListener('click', () => {
+    menuItems.classList.toggle('hidden');
+  });
+</script>
 </body>
 </html>
