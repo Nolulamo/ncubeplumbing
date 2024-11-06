@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ncube Plumbing</title>
+    <link rel="icon" href="./images/plumbing4.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <style>
         :root {
@@ -44,21 +45,24 @@
 </head>
 <body>
 <div class="flex flex-col min-h-[100dvh]">
-  <header class="bg-primary text-primary-foreground py-4 px-6 md:px-8 flex items-center justify-between">
-    <a class="text-3xl font-bold" href="#">
+  <header class="bg-primary text-primary-foreground flex items-center justify-between md:px-8 md:py-6">
+    <a class="text-3xl font-bold" href="#home">
       Ncube's Plumbing
     </a>
     <nav class="hidden md:flex items-center gap-6">
-      <a class="hover:underline" href="#">
-        About Us
-      </a>
-      <a class="hover:underline" href="#">
-        Gallery
-      </a>
-      <a class="hover:underline" href="#">
+      <a class="hover:underline md:text-lg" href="#services">
         Services
       </a>
-      <a class="hover:underline" href="#">
+      <a class="hover:underline md:text-lg" href="#about-us">
+        About Us
+      </a>
+      <a class="hover:underline md:text-lg" href="#our-work">
+        Gallery
+      </a>
+      <a class="hover:underline md:text-lg" href="#testimonials">
+        Testimonials
+      </a>
+      <a class="hover:underline md:text-lg" href="#contact-us">
         Contact Us
       </a>
     </nav>
@@ -82,13 +86,13 @@
       <span class="sr-only">Toggle navigation menu</span>
     </button>
   </header>
-  <section class="py-10 px-6 md:px-8 flex flex-col">
-    <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] flex items-center h-screen">
+  <section class="flex flex-col md:px-8 md:py-10" id="home">
+    <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px] flex items-center h-auto">
         <div class="mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold text-orange-500 mb-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">
                 Ncube's Plumbing
             </h1>
-            <p class="text-lg md:text-xl text-muted-foreground mb-8">We are a team of skilled professionals dedicated to providing top-notch bathroom renovations and iron gate work. With years of experience, we strive to deliver exceptional service and quality craftsmanship.</p>
+            <p class="text-muted-foreground mb-8 md:text-lg">We are a team of skilled professionals dedicated to providing top-notch bathroom renovations and iron gate work. With years of experience, we strive to deliver exceptional service and quality craftsmanship.</p>
             <a class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" href="#">
             Learn More
             </a>
@@ -98,60 +102,57 @@
         </div>
     </div>
   </section>
-  <section class="py-6 md:py-8 px-6 md:px-8">
-    <div class="max-w-5xl mx-auto">
+  <section class="md:px-8 md:py-10" id="services">
+    <div class="mx-auto space-y-8">
         <div class="container mx-auto" data-id="26">
-            <div class="mb-8 text-center" data-id="27">
-                <h2 class="text-3xl font-bold mb-2 text-orange-500" data-id="28">Featured Services
+            <div class="text-center md:mb-8" data-id="27">
+                <h2 class="text-3xl font-bold mb-2 text-orange-500" data-id="28">Our Services
                 </h2>
-                <p class="text-muted-foreground" data-id="29">Explore our expertise in bathroom renovations and iron gate work.
-                </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-id="30">
-                <div class="bg-card p-6 rounded-lg shadow" data-id="31">
+                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300" data-id="31">
                     <div class="flex items-center mb-4" data-id="32">
                         <svg data-id="33" class="text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 mr-2"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path><line x1="10" x2="8" y1="5" y2="7"></line><line x1="2" x2="22" y1="12" y2="12"></line><line x1="7" x2="7" y1="19" y2="21"></line><line x1="17" x2="17" y1="19" y2="21"></line>
                         </svg>
-                        <h3 class="text-xl font-bold text-orange-500 px-2" data-id="34">
+                        <h3 class="text-2xl font-bold text-muted-foreground px-2" data-id="34">
                             Bathroom Renovations
                         </h3>
                     </div>
-                    <p class="text-muted-foreground" data-id="35">Our team of skilled plumbers and tilers can transform your bathroom into a modern, functional, and visually appealing space. From complete overhauls to minor upgrades, we've got you covered.
+                    <p class="text-muted-foreground md:text-lg" data-id="35">Our team of skilled plumbers and tilers can transform your bathroom into a modern, functional, and visually appealing space. From complete overhauls to minor upgrades, we've got you covered.
                     </p>
                 </div>
-                <div class="bg-card p-6 rounded-lg shadow" data-id="36">
+                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300" data-id="36">
                     <div class="flex items-center mb-4" data-id="37">
                         <svg data-id="38" class="text-muted-foreground" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 mr-2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                         </svg>
-                        <h3 class="text-xl font-bold text-orange-500 px-2" data-id="39">
+                        <h3 class="text-2xl px-2 font-bold text-muted-foreground" data-id="39">
                             Iron Gate Work
                         </h3>
                     </div>
-                    <p class="text-muted-foreground" data-id="40">Our experienced welders can design and fabricate custom iron gates, fences, and other metal structures to enhance the curb appeal and security of your property.
+                    <p class="text-muted-foreground md:text-lg" data-id="40">Our experienced welders can design and fabricate custom iron gates, fences, and other metal structures to enhance the curb appeal and security of your property.
                     </p>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto py-10">
-            <h2 class="text-3xl md:text-3xl font-bold mb-6 text-center text-orange-500">Regular Services</h2>
+        <div class="container mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-card p-6 rounded-lg shadow">
-                <h3 class="text-2xl font-bold mb-4 text-orange-500">Plumbing</h3>
-                <p class="text-muted-foreground mb-4">
+                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300">
+                <h3 class="text-2xl font-bold mb-4 text-muted-foreground">Plumbing</h3>
+                <p class="text-muted-foreground mb-4 md:text-lg">
                     Our team of experienced plumbers specializes in all aspects of plumbing, including bathroom renovations,
                     pipe repairs, and water heater installations.
                 </p>
                 </div>
-                <div class="bg-card p-6 rounded-lg shadow">
-                <h3 class="text-2xl font-bold mb-4 text-orange-500">Welding</h3>
-                <p class="text-muted-foreground mb-4">
+                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300">
+                <h3 class="text-2xl font-bold mb-4 text-muted-foreground">Welding</h3>
+                <p class="text-muted-foreground mb-4 md:text-lg">
                     We offer professional welding services for custom iron gate fabrication and installation, ensuring a
                     durable and aesthetically pleasing final product.
                 </p>
                 </div>
-                <div class="bg-card p-6 rounded-lg shadow">
-                <h3 class="text-2xl font-bold mb-4 text-orange-500">Tiling</h3>
-                <p class="text-muted-foreground mb-4">
+                <div class="bg-card p-6 rounded-lg shadow-md border border-gray-300">
+                <h3 class="text-2xl font-bold mb-4 text-muted-foreground">Tiling</h3>
+                <p class="text-muted-foreground mb-4 md:text-lg">
                     Our skilled tilers specialize in bathroom tile installation, creating beautiful and functional spaces
                     that meet your specific needs.
                 </p>
@@ -160,29 +161,29 @@
         </div>
     </div>
   </section>
-  <section class="py-4 md:py-4 px-6 md:px-8">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-3xl md:text-3xl font-bold mb-6 text-orange-500 text-center">About Us</h2>
+  <section class="md:px-8 md:py-10 bg-primary" id="about-us">
+    <div class="mx-auto">
+      <h2 class="font-bold mb-6 text-white text-center md:text-3xl ">About Us</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-2xl font-bold mb-4 text-orange-500">Our History</h3>
-          <p class="text-muted-foreground mb-4">
+          <h3 class="text-2xl font-bold mb-4 text-white">Our History</h3>
+          <p class="text-white mb-4 md:text-lg">
             Ncube\'s Plumbing was founded in 2010 with the goal of providing high-quality plumbing and bathroom
             renovation services to the local community. Over the years, we\'ve expanded our expertise to include
             iron gate fabrication and installation.
           </p>
-          <p class="text-muted-foreground">
+          <p class="text-white md:text-lg">
             Our team of skilled professionals is dedicated to delivering exceptional results and exceeding our
             clients' expectations.
           </p>
         </div>
         <div>
-          <h3 class="text-2xl font-bold mb-4 text-orange-500">Our Team</h3>
-          <p class="text-muted-foreground mb-4">
+          <h3 class="text-2xl font-bold mb-4 text-white">Our Team</h3>
+          <p class="text-white mb-4 md:text-lg">
             At Ncube's Plumbing, we have a team of experienced and certified plumbers, welders, and tilers who work
             together to ensure the success of every project.
           </p>
-          <p class="text-muted-foreground">
+          <p class="text-white md:text-lg">
             Our team members have years of expertise in their respective fields and are committed to providing
             exceptional service to our clients.
           </p>
@@ -190,13 +191,13 @@
       </div>
     </div>
   </section>
-  <section class="py-4 md:py-6 px-6 md:px-8 bg-muted">
-    <div class="max-w-5xl mx-auto">
+  <section class="md:px-8 md:py-10" id="our-work">
+    <div class="mx-auto">
       <h2 class="text-3xl md:text-3xl font-bold mb-6 text-orange-500 text-center">Our Work</h2>
       <div dir="ltr" data-orientation="horizontal">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <img
-            src="/placeholder.svg"
+            src="./images/toilet_seat.jpg"
             width="400"
             height="300"
             alt="Before"
@@ -204,7 +205,7 @@
             style="aspect-ratio:400/300;object-fit:cover"
         />
         <img
-            src="/placeholder.svg"
+            src="./images/water_tap.jpg"
             width="400"
             height="300"
             alt="Before"
@@ -212,7 +213,32 @@
             style="aspect-ratio:400/300;object-fit:cover"
         />
         <img
-            src="/placeholder.svg"
+            src="./images/tiling.jpg"
+            width="400"
+            height="300"
+            alt="Before"
+            class="rounded-lg object-cover"
+            style="aspect-ratio:400/300;object-fit:cover"
+        />
+
+        <img
+            src="./images/plumbing.jpg"
+            width="400"
+            height="300"
+            alt="Before"
+            class="rounded-lg object-cover"
+            style="aspect-ratio:400/300;object-fit:cover"
+        />
+        <img
+            src="./images/plumbing2.jpg"
+            width="400"
+            height="300"
+            alt="Before"
+            class="rounded-lg object-cover"
+            style="aspect-ratio:400/300;object-fit:cover"
+        />
+        <img
+            src="./images/plumbing3.jpg"
             width="400"
             height="300"
             alt="Before"
@@ -223,24 +249,25 @@
       </div>
     </div>
   </section>
-  <section class="py-4 md:py-6 px-6 md:px-8 bg-muted">
-    <div class="max-w-5xl mx-auto">
+  <section class="bg-muted md:px-8 md:py-10" id="testimonials">
+    <div class="mx-auto">
+      <p class="text-center font-semibold md:text-lg text-muted-foreground">Testimonials</p>
       <h2 class="text-3xl md:text-3xl font-bold mb-6 text-orange-500 text-center">What Our Clients Say</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
           <div class="p-6 space-y-4">
             <div class="flex items-center gap-4">
               <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
-                <img class="aspect-square h-full w-full" alt="Client 1" src="/placeholder-user.jpg" />
+                <img class="aspect-square h-full w-full" alt="Client 1" src="./images/user_1.png" />
               </span>
               <div>
-                <h4 class="text-lg font-semibold text-orange-500">John Doe</h4>
-                <p class="text-muted-foreground">Homeowner</p>
+                <h4 class="text-lg font-semibold text-muted-foreground">John Doe</h4>
+                <p class="italic text-orange-500 opacity-70 md:text-sm">Homeowner</p>
               </div>
             </div>
             <blockquote>
-              <p class="text-muted-foreground">
-                "Ncube\'s Plumbing did an amazing job on my bathroom renovation. They were professional, efficient,
+              <p class="text-muted-foreground md:text-lg">
+                "Ncube's Plumbing did an amazing job on my bathroom renovation. They were professional, efficient,
                 and the final result exceeded my expectations."
               </p>
             </blockquote>
@@ -250,16 +277,16 @@
           <div class="p-6 space-y-4">
             <div class="flex items-center gap-4">
               <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
-                <img class="aspect-square h-full w-full" alt="Client 2" src="/placeholder-user.jpg" />
+                <img class="aspect-square h-full w-full text-muted-foreground" alt="Client 2" src="./images/user_1.png" />
               </span>
               <div>
-                <h4 class="text-lg font-semibold text-orange-500">Jane Smith</h4>
-                <p class="text-muted-foreground">Business Owner</p>
+                <h4 class="text-lg font-semibold text-muted-foreground">Jane Smith</h4>
+                <p class="text-orange-500 opacity-70 md:text-sm italic">Business Owner</p>
               </div>
             </div>
             <blockquote>
-              <p class="text-muted-foreground">
-                "I\'ve used Ncube\'s Plumbing for both my home and business, and they\'ve always provided excellent
+              <p class="text-muted-foreground md:text-lg ">
+                "I've worked with Ncube's Plumbing for both my home and business, and they've always provided excellent
                 service. I highly recommend them to anyone in need of plumbing or welding work."
               </p>
             </blockquote>
@@ -269,17 +296,17 @@
           <div class="p-6 space-y-4">
             <div class="flex items-center gap-4">
               <span class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
-                <img class="aspect-square h-full w-full" alt="Client 3" src="/placeholder-user.jpg" />
+                <img class="aspect-square h-full w-full" alt="Client 3" src="./images/user_1.png" />
               </span>
               <div>
-                <h4 class="text-lg font-semibold text-orange-500">Michael Johnson</h4>
-                <p class="text-muted-foreground">Homeowner</p>
+                <h4 class="text-lg font-semibold text-muted-foreground">Michael Johnson</h4>
+                <p class="text-orange-500 opacity-70 md:text-sm italic">Homeowner</p>
               </div>
             </div>
             <blockquote>
-              <p class="text-muted-foreground">
-                "The team at Ncube\'s Plumbing was incredibly professional and responsive throughout the entire
-                process of installing my new iron gate. I\'m thrilled with the final result."
+              <p class="text-muted-foreground md:text-lg">
+                "The team at Ncube's Plumbing was incredibly professional and responsive throughout the entire
+                process of installing my new iron gate. I'm thrilled with the final result."
               </p>
             </blockquote>
           </div>
@@ -287,29 +314,29 @@
       </div>
     </div>
   </section>
-  <section class="py-6 md:py-6 px-6 md:px-8 bg-muted">
-    <div class="max-w-5xl mx-auto">
+  <section class="bg-muted md:px-8 md:py-10" id="contact-us">
+    <div class="mx-auto">
       <h2 class="text-3xl md:text-3xl font-bold mb-6 text-orange-500 text-center">Contact Us</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <form class="space-y-4">
             <input
-              class="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+              class="flex h-10 text-muted-foreground rounded-md border border-input bg-background px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-0 focus-visible:border-primary w-full"
               type="text"
               placeholder="Name"
             />
             <input
-              class="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+              class="flex h-10 text-muted-foreground rounded-md border border-input bg-background px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-0 focus-visible:border-primary w-full"
               type="email"
               placeholder="Email"
             />
             <textarea
-              class="flex min-h-[80px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+              class="flex h-10 text-muted-foreground rounded-md border border-input bg-background px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-0 focus-visible:border-primary w-full"
               placeholder="Message"
               rows="5"
             ></textarea>
             <button
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 hover:text-primary hover:shadow-md hober:border hover:border-primary py-2 w-full"
               type="submit"
             >
               Submit
@@ -317,26 +344,26 @@
           </form>
         </div>
         <div>
-          <div class="space-y-4">
+          <div class="space-y-4 md:px-4">
             <div>
               <h3 class="text-2xl font-bold mb-2 text-orange-500">Address</h3>
-              <p class="text-muted-foreground">123 Main Street, Anytown USA</p>
+              <p class="text-muted-foreground">85 Heine Street Lombardy East  Johannesburg</p>
             </div>
             <div>
               <h3 class="text-2xl font-bold mb-2 text-orange-500">Phone</h3>
-              <p class="text-muted-foreground">(555) 555-5555</p>
+              <p class="text-muted-foreground">+2784 308 7632</p>
             </div>
             <div>
               <h3 class="text-2xl font-bold mb-2 text-orange-500">Hours</h3>
-              <p class="text-muted-foreground">Monday - Friday: 8am - 5pm</p>
+              <p class="text-muted-foreground">24 Hrs / 7 days</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <footer class="bg-primary text-primary-foreground py-6 px-6 md:px-8">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
+  <footer class="bg-primary text-primary-foreground md:px-8 md:py-10">
+    <div class="mx-auto flex flex-col md:flex-row items-center justify-between">
       <p class="text-sm">© 2024 Ncube's Plumbing</p>
       <div class="flex items-center gap-4 mt-4 md:mt-0">
         <a class="hover:underline" href="#">
@@ -349,7 +376,7 @@
           Instagram
         </a>
         <a
-          class="inline-flex items-center justify-center rounded-md bg-primary-foreground px-8 py-3 text-sm font-medium bg-primary shadow-sm transition-colors hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          class="inline-flex text-primary items-center justify-center rounded-md bg-white px-8 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-secondary/90 focus:outline-none focus:ring-0"
           href="#"
         >
           Request a Quote
