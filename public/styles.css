@@ -803,6 +803,10 @@ select {
   visibility: collapse;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1377,6 +1381,10 @@ select {
   }
 }
 
+.running {
+  animation-play-state: running;
+}
+
 .file\:border-0::file-selector-button {
   border-width: 0px;
 }
@@ -1556,10 +1564,6 @@ select {
 }
 
 @media (min-width: 1024px) {
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-\[1fr_400px\] {
     grid-template-columns: 1fr 400px;
   }
